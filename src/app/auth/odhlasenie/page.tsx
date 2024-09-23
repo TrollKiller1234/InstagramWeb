@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 
 export const metadata = { title: 'Odhlasenie | ZoskaSnap'}
 
-export default function LogOut() {
+export default function SignOut() {
 
   return(
     <Container>
