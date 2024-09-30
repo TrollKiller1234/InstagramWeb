@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from '/home/maximiliankiss@s.zochova.sk/Dokumenty/Dev/moje/src/components/NavBar.tsx'; // Import the Navbar component
 
 export const metadata: Metadata = {
   title: "SnapZoska",
@@ -13,8 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sk">
-      <body >
-        {children}
+      <body>
+        <Navbar />  {/* Navbar will be rendered on top */}
+        {children}  {/* Render the children components */}
       </body>
     </html>
   );
