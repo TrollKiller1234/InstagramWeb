@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   return (
     <AppBar 
       position="fixed" 
-      color="primary" 
+      color="#FFFFFF" 
       sx={{ top: 'auto', bottom: 0 }} // Position it at the bottom
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* SignUp Icon */}
-        <Link href="auth/registracia" passHref>
+        <Link href="/auth/registracia" passHref>
           <IconButton color="inherit">
             <AppRegistrationIcon />
           </IconButton>
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* SignIn Icon */}
-        <Link href="auth/prihlasenie" passHref>
+        <Link href="/auth/prihlasenie" passHref>
           <IconButton color="inherit">
             <LoginIcon />
           </IconButton>

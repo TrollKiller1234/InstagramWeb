@@ -1,11 +1,11 @@
 
-// src/app/page.tsx
+// src/app/auth/prihlasenie/page.tsx
 
 import Typography from "@mui/material/Typography";
 
-export const metadata = { title: 'Domov | ZoskaSnap'}
+export const metadata = { title: 'Prihlasenie | ZoskaSnap'}
 
-export default function Home() {
+export default function SignIn() {
 
   return(
 
