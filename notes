@@ -30,3 +30,9 @@ Github – sluzi na ulozenie zdrojoveho kodu na cloud
 Vercel – Sluzba ktora poskytuje dostupnost stranky mimo localhosta. Cize na internete.
 
 LOCAL FILE -> GIT -> GITHUB -> VERCEL IP
+
+
+
+
+
+ls -R | awk '/:$/ {gsub(/:/,""); print $0;next} /^$/ {next} {print "|-- "$0}'
