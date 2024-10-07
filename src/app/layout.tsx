@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from '/home/maximiliankiss@s.zochova.sk/Dokumenty/Dev/moje/src/components/NavBar'; // Import the updated Navbar
+import Navbar from '@/components/NavBar'; // Import the updated Navbar
 
 export const metadata: Metadata = {
   title: "SnapZoska",
