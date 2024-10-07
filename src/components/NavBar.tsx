@@ -4,11 +4,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import HomeIcon from '@mui/icons-material/Home';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
-import Box from '@mui/material/Box';
 import LoginIcon from '@mui/icons-material/Login';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 
@@ -16,7 +13,7 @@ const Navbar: React.FC = () => {
   return (
     <AppBar 
       position="fixed" 
-      color="#FFFFFF" 
+      color="inherit" 
       sx={{ top: 'auto', bottom: 0 }} // Position it at the bottom
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
