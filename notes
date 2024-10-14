@@ -37,3 +37,5 @@ LOCAL FILE -> GIT -> GITHUB -> VERCEL IP
 VYPIS STRUKTURY PROJEKTU
 cd src
 ls -R | awk '/:$/ {gsub(/:/,""); print $0;next} /^$/ {next} {print "|-- "$0}'
+
+.gitignore - vsetko co sa tu zapise git ignoruje a nekomituje
