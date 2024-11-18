@@ -1,13 +1,27 @@
-import React from 'react';
 
-const AuthHomeView: React.FC = () => {
+
+
+
+
+
+
+// src/sections/AuthHomeView.tsx
+
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import { Session } from "next-auth";
+
+export default function AuthHomeView({ session }: { session: Session | null }) {
+  if (!session) {
+    return <Typography>Loading...</Typography>;
+  }
+
   return (
-    <div>
-      <h1>Vitajte spat na SnapZoska!</h1>
-      <p>Tu najdete posledne prispevky</p>
-      {/* Add your authenticated user content here */}
-    </div>
+    <Container>
+      <Typography> Domovská stránka - prihlásený user</Typography>
+      <Typography variant="h4" sx={{ mb: 3 }}>
+        Vitajte, {session?.user?.name || "užívateľ"}!
+      </Typography>
+    </Container>
   );
-};
-
-export default AuthHomeView;
+}

@@ -1,26 +1,16 @@
-'use client';
+// src/app/page.tsx
 
-import { useSession } from 'next-auth/react';
-import NonAuthHomeView from '@/sections/NonAuthHomeView';
-import AuthHomeView from '@/sections/AuthHomeView';
+import { getServerSession } from "next-auth";
+import { authOptions } from "../api/auth/[...nextauth]/authOptions";
+import AuthHomeView from "@/sections/AuthHomeView";
+import NonAuthHomeView from "@/sections/NonAuthHomeView";
 
-const HomePage: React.FC = () => {
-  const { data: session, status } = useSession();
+export const metadata = { title: "Domov | ZoškaSnap" };
 
-  if (status === 'loading') {
-    // You can return a loading spinner while session is being fetched
-    return <div>Loading...</div>;
-  }
+export default async function HomePage() {
+  // Fetch session on the server
+  const session = await getServerSession(authOptions);
 
-  if (session) {
-    // User is authenticated, show the Authenticated Home View
-    return <AuthHomeView />;
-  } else {
-    // User is not authenticated, show the Non-Authenticated Home View
-    return <NonAuthHomeView />;
-  }
-};
-
-export default HomePage;
-
-
+  // Conditionally render authenticated or non-authenticated home view
+  return session ? <AuthHomeView session={session} /> : <NonAuthHomeView />;
+}

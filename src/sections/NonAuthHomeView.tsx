@@ -1,14 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
+// src/sections/NonAuthHomeView.tsx
 
-const NonAuthHomeView: React.FC = () => {
+import { Container, Typography } from "@mui/material";
+
+export default function NonAuthHomeView() {
   return (
-    <div>
-      <h1>Vitajte na SnapZoska</h1>
-      <p>Prosim zaregistrujte sa pre viacej moznosti.</p>
-      <Link href="/auth/prihlasenie">PRIHLASENIE</Link> | <Link href="/auth/registracia">Sign Up</Link>
-    </div>
+    <Container>
+      <Typography variant="body1" sx={{ mt: 2 }}>
+        Domovská stránka - NEprihlásený user
+      </Typography>
+      <Typography>
+        Registrujte sa, aby ste mohli pridať príspevky a zobraziť profil.
+      </Typography>
+    </Container>
   );
-};
-
-export default NonAuthHomeView;
+}
